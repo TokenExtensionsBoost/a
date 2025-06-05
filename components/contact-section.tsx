@@ -1,13 +1,38 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from "lucide-react"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog"
 
 export default function ContactSection() {
+  const [showCallDialog, setShowCallDialog] = useState(false)
+  
+  const handleCallClick = () => {
+    setShowCallDialog(true)
+  }
+  
+  const confirmCall = () => {
+    window.open("tel:0583543456", "_self")
+  }
+  
+  const handleZaloClick = () => {
+    window.open("https://zalo.me/0583543456", "_blank")
+  }
+  
   return (
     <section className="py-16 bg-gradient-to-b from-green-50 to-green-100">
       <div className="container mx-auto px-4">
@@ -51,7 +76,7 @@ export default function ContactSection() {
                     <div>
                       <h4 className="font-semibold text-green-800 mb-1">Hotline/Zalo</h4>
                       <p className="text-gray-600 hover:text-green-600 cursor-pointer transition-colors">
-                        <a href="tel:0583543456">0583 543 456</a>
+                        <a href="#" onClick={handleCallClick}>0583 543 456</a>
                       </p>
                       <p className="text-sm text-gray-500">Hỗ trợ 24/7</p>
                     </div>
@@ -97,14 +122,14 @@ export default function ContactSection() {
                 <h4 className="font-semibold text-green-800">Liên hệ nhanh:</h4>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-green-600 hover:bg-green-700 text-white flex items-center justify-center" 
-                          onClick={() => window.open("https://zalo.me/0583543456", "_blank")}>
+                          onClick={handleZaloClick}>
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Chat Zalo
                   </Button>
                   <Button
                     variant="outline"
                     className="border-orange-500 text-orange-500 hover:bg-orange-50 flex items-center justify-center"
-                    onClick={() => window.open("tel:0583543456", "_self")}
+                    onClick={handleCallClick}
                   >
                     <Phone className="w-4 h-4 mr-2" />
                     Gọi ngay
@@ -223,6 +248,24 @@ export default function ContactSection() {
           </div>
         </motion.div>
       </div>
+      
+      {/* Call Confirmation Dialog */}
+      <AlertDialog open={showCallDialog} onOpenChange={setShowCallDialog}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Xác nhận cuộc gọi</AlertDialogTitle>
+            <AlertDialogDescription>
+              Bạn muốn gọi đến số 0583 543 456 ?
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Hủy</AlertDialogCancel>
+            <AlertDialogAction onClick={confirmCall} className="bg-green-600 hover:bg-green-700 text-white">
+              Gọi ngay
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </section>
   )
 }

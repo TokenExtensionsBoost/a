@@ -4,9 +4,11 @@ import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Car } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const router = useRouter()
 
   const navItems = [
     { href: "/", label: "Trang chủ" },
@@ -16,6 +18,20 @@ export default function Header() {
     { href: "/reviews", label: "Đánh giá" },
     { href: "/contact", label: "Liên hệ" },
   ]
+
+  const handleBookNow = () => {
+    // Nếu đang ở trang chủ, scroll đến form đặt xe
+    if (window.location.pathname === "/") {
+      const bookingForm = document.querySelector("#booking-form")
+      if (bookingForm) {
+        bookingForm.scrollIntoView({ behavior: "smooth" })
+      }
+    } else {
+      // Nếu không ở trang chủ, chuyển đến trang chủ và thêm hash để scroll đến form
+      router.push("/?scroll=booking")
+    }
+    if (isMenuOpen) setIsMenuOpen(false)
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-green-100">
@@ -47,7 +63,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white">Đặt xe ngay</Button>
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white" onClick={handleBookNow}>Đặt xe ngay</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,7 +86,7 @@ export default function Header() {
                   {item.label}
                 </Link>
               ))}
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white w-full mt-4">Đặt xe ngay</Button>
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white w-full mt-4" onClick={handleBookNow}>Đặt xe ngay</Button>
             </nav>
           </div>
         )}

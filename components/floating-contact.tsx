@@ -4,11 +4,26 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Phone, MessageCircle, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog"
 
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false)
+  const [showCallDialog, setShowCallDialog] = useState(false)
 
   const handleCall = () => {
+    setShowCallDialog(true)
+  }
+
+  const confirmCall = () => {
     window.open("tel:0583543456", "_self")
   }
 
@@ -66,6 +81,24 @@ export default function FloatingContact() {
 
       {/* Pulse Animation */}
       {!isOpen && <div className="absolute inset-0 rounded-full bg-orange-500 animate-ping opacity-20"></div>}
+      
+      {/* Call Confirmation Dialog */}
+      <AlertDialog open={showCallDialog} onOpenChange={setShowCallDialog}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Xác nhận cuộc gọi</AlertDialogTitle>
+            <AlertDialogDescription>
+              Bạn muốn gọi đến số 0583 543 456 ?
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Hủy</AlertDialogCancel>
+            <AlertDialogAction onClick={confirmCall} className="bg-green-600 hover:bg-green-700 text-white">
+              Gọi ngay
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   )
 }

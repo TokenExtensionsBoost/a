@@ -5,6 +5,20 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, MapPin, Clock, Users } from "lucide-react"
 
 export default function HeroSection() {
+  const scrollToBookingForm = () => {
+    const bookingForm = document.querySelector("#booking-form")
+    if (bookingForm) {
+      bookingForm.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  const scrollToToursSection = () => {
+    const toursSection = document.querySelector("#tours-section")
+    if (toursSection) {
+      toursSection.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -57,7 +71,11 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg">
+            <Button 
+              size="lg" 
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg"
+              onClick={scrollToBookingForm}
+            >
               Đặt xe ngay <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <motion.div whileHover={{ scale: 1.05 }}>
@@ -65,6 +83,7 @@ export default function HeroSection() {
                 size="lg"
                 variant="outline"
                 className="bg-orange-500 border-orange-500 text-white hover:bg-orange-600 hover:border-orange-600 px-8 py-4 text-lg transition-all duration-300 shadow-lg"
+                onClick={scrollToToursSection}
               >
                 Xem lịch trình
               </Button>

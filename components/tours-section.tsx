@@ -33,8 +33,15 @@ const tours = [
 ]
 
 export default function ToursSection() {
+  const scrollToBookingForm = () => {
+    const bookingForm = document.querySelector("#booking-form")
+    if (bookingForm) {
+      bookingForm.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
-    <section className="py-16 bg-gradient-to-b from-green-50 to-white">
+    <section className="py-16 bg-gradient-to-b from-green-50 to-white" id="tours-section">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2
@@ -102,7 +109,12 @@ export default function ToursSection() {
                     </ul>
                   </div>
 
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">Chọn lịch trình này</Button>
+                  <Button 
+                    className="w-full bg-green-600 hover:bg-green-700 text-white"
+                    onClick={scrollToBookingForm}
+                  >
+                    Chọn lịch trình này
+                  </Button>
                 </CardContent>
               </Card>
             </motion.div>
@@ -124,7 +136,12 @@ export default function ToursSection() {
               <p className="text-green-100 mb-6">
                 Chúng tôi sẽ thiết kế hành trình phù hợp với sở thích và thời gian của bạn
               </p>
-              <Button variant="secondary" size="lg" className="bg-white text-green-600 hover:bg-green-50">
+              <Button 
+                variant="secondary" 
+                size="lg" 
+                className="bg-white text-green-600 hover:bg-green-50"
+                onClick={scrollToBookingForm}
+              >
                 Liên hệ tư vấn
               </Button>
             </CardContent>
