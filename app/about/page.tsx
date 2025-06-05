@@ -21,7 +21,7 @@ const teamMembers = [
   },
   {
     name: "Chị Thuỷ",
-    role: "Chăm sóc khách hàng",
+    role: "Chăm sóc khách hàng", 
     experience: "5 năm kinh nghiệm",
     image: "/images/chi thuy.jpg",
     description: "Tư vấn nhiệt tình, hỗ trợ khách hàng 24/7 với thái độ thân thiện và chuyên nghiệp",

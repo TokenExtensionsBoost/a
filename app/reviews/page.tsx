@@ -15,8 +15,8 @@ const reviews = [
     tour: "Tour 2 ngày 1 đêm",
     comment:
       "Dịch vụ tuyệt vời! Tài xế anh Dũng rất nhiệt tình, xe sạch sẽ. Gia đình tôi đã có chuyến đi Mộc Châu rất đáng nhớ. Đặc biệt ấn tượng với cảnh đồi chè buổi sáng sớm, thực sự như tranh vẽ. Sẽ quay lại lần sau!",
-    image: "/images/review-avatar-1.jpg",
-    photos: ["/images/review-1.jpg", "/images/review-2.jpg"],
+    image: "https://i.pravatar.cc/150?img=1",
+    photos: ["https://source.unsplash.com/random/300x200?mocchau-1", "https://source.unsplash.com/random/300x200?vietnam-1"],
     helpful: 24,
   },
   {
@@ -28,8 +28,8 @@ const reviews = [
     tour: "Tour 3 ngày 2 đêm",
     comment:
       "Lần đầu đi Mộc Châu, được anh tài xế hướng dẫn rất tận tình. Giá cả hợp lý, xe đời mới. Homestay rất sạch sẽ, chủ nhà thân thiện. Cảm ơn team Mộc Châu Trip Car đã tạo nên chuyến đi hoàn hảo!",
-    image: "/images/review-avatar-2.jpg",
-    photos: ["/images/review-3.jpg"],
+    image: "https://i.pravatar.cc/150?img=5",
+    photos: ["https://source.unsplash.com/random/300x200?tea-plantation"],
     helpful: 18,
   },
   {
@@ -41,11 +41,11 @@ const reviews = [
     tour: "Xe 16 chỗ - 1 ngày",
     comment:
       "Đặt xe 16 chỗ cho công ty đi team building. Mọi thứ đều hoàn hảo từ A-Z. Đúng giờ, an toàn, tài xế vui vẻ. Xe rộng rãi, máy lạnh mát. Highly recommended cho các công ty muốn tổ chức tour!",
-    image: "/images/review-avatar-3.jpg",
+    image: "https://i.pravatar.cc/150?img=3",
     photos: [
-      "/images/review-4.jpg",
-      "/images/review-5.jpg",
-      "/images/review-6.jpg",
+      "https://source.unsplash.com/random/300x200?mocchau-2",
+      "https://source.unsplash.com/random/300x200?team-building",
+      "https://source.unsplash.com/random/300x200?vietnam-landscape",
     ],
     helpful: 31,
   },
@@ -58,8 +58,8 @@ const reviews = [
     tour: "Tour 2 ngày 1 đêm",
     comment:
       "Chuyến đi gia đình 6 người, thuê xe 7 chỗ rất thoải mái. Lịch trình linh hoạt, muốn dừng đâu cũng được. Giá cả minh bạch, không phát sinh. Tài xế anh Tuấn rất am hiểu địa phương, giới thiệu nhiều địa điểm đẹp.",
-    image: "/images/review-avatar-4.jpg",
-    photos: ["/images/review-7.jpg"],
+    image: "https://i.pravatar.cc/150?img=9",
+    photos: ["https://source.unsplash.com/random/300x200?family-travel"],
     helpful: 15,
   },
   {
@@ -71,8 +71,8 @@ const reviews = [
     tour: "Tour 1 ngày",
     comment:
       "Lần thứ 3 sử dụng dịch vụ. Luôn hài lòng với chất lượng phục vụ. Đặc biệt cảm ơn anh Tuấn đã chụp ảnh gia đình rất đẹp! Xe luôn sạch sẽ, tài xế đúng giờ và nhiệt tình.",
-    image: "/images/review-avatar-5.jpg",
-    photos: ["/images/review-8.jpg", "/images/review-9.jpg"],
+    image: "https://i.pravatar.cc/150?img=12",
+    photos: ["https://source.unsplash.com/random/300x200?mountains-vietnam", "https://source.unsplash.com/random/300x200?vietnam-2"],
     helpful: 22,
   },
   {
@@ -84,8 +84,8 @@ const reviews = [
     tour: "Tour 2 ngày 1 đêm",
     comment:
       "Đi với nhóm bạn thân, thuê xe 7 chỗ. Tài xế rất am hiểu địa phương, giới thiệu nhiều địa điểm đẹp mà chúng tôi không biết. Chuyến đi quá tuyệt vời! Đã giới thiệu cho nhiều bạn bè.",
-    image: "/images/review-avatar-6.jpg",
-    photos: ["/images/review-10.jpg"],
+    image: "https://i.pravatar.cc/150?img=20",
+    photos: ["https://source.unsplash.com/random/300x200?friends-travel"],
     helpful: 19,
   },
 ]
@@ -98,12 +98,12 @@ const stats = [
 ]
 
 const tourTypes = [
-  { name: "Tour 1 ngày", count: 156, rating: 4.8 },
-  { name: "Tour 2 ngày 1 đêm", count: 203, rating: 4.9 },
-  { name: "Tour 3 ngày 2 đêm", count: 89, rating: 5.0 },
-  { name: "Xe 4 chỗ", count: 312, rating: 4.8 },
-  { name: "Xe 7 chỗ", count: 445, rating: 4.9 },
-  { name: "Xe 16 chỗ", count: 178, rating: 4.9 },
+  { name: "Tour 1 ngày", count: 156, rating: 5 },
+  { name: "Tour 2 ngày 1 đêm", count: 203, rating: 5 },
+  { name: "Tour 3 ngày 2 đêm", count: 89, rating: 5 },
+  { name: "Xe 4 chỗ", count: 312, rating: 5 },
+  { name: "Xe 7 chỗ", count: 445, rating: 5 },
+  { name: "Xe 16 chỗ", count: 178, rating: 5 },
 ]
 
 export default function ReviewsPage() {
@@ -254,26 +254,6 @@ export default function ReviewsPage() {
                       <Quote className="absolute -top-2 -left-2 w-6 h-6 text-green-200" />
                       <p className="text-gray-700 leading-relaxed pl-4">{review.comment}</p>
                     </div>
-
-                    {/* Photos */}
-                    {review.photos && review.photos.length > 0 && (
-                      <div className="mb-4">
-                        <div className="flex items-center mb-2">
-                          <Camera className="w-4 h-4 text-gray-500 mr-2" />
-                          <span className="text-sm text-gray-600">Ảnh từ chuyến đi ({review.photos.length})</span>
-                        </div>
-                        <div className="grid grid-cols-3 gap-2">
-                          {review.photos.slice(0, 3).map((photo, idx) => (
-                            <img
-                              key={idx}
-                              src={photo || "/placeholder.svg"}
-                              alt={`Ảnh ${idx + 1}`}
-                              className="w-full h-20 object-cover rounded-lg"
-                            />
-                          ))}
-                        </div>
-                      </div>
-                    )}
 
                     {/* Helpful */}
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100">

@@ -8,7 +8,7 @@ import { Check, Car, Users, Clock, MapPin, Shield, Star } from "lucide-react"
 const carServices = [
   {
     name: "Xe 4 chỗ",
-    image: "/placeholder.svg?height=250&width=400",
+    image: "/images/xe4cho.jpeg",
     pricePerDay: "800.000đ",
     pricePerHour: "100.000đ",
     description: "Phù hợp cho gia đình nhỏ, cặp đôi hoặc nhóm bạn 2-4 người",
@@ -23,7 +23,7 @@ const carServices = [
   },
   {
     name: "Xe 7 chỗ",
-    image: "/placeholder.svg?height=250&width=400",
+    image: "/images/xe7cho.jpeg",
     pricePerDay: "1.200.000đ",
     pricePerHour: "150.000đ",
     description: "Lựa chọn hoàn hảo cho gia đình đông người hoặc nhóm bạn 5-7 người",
@@ -32,7 +32,7 @@ const carServices = [
   },
   {
     name: "Xe 16 chỗ",
-    image: "/placeholder.svg?height=250&width=400",
+    image: "/images/xe16cho.jpg",
     pricePerDay: "2.000.000đ",
     pricePerHour: "250.000đ",
     description: "Dành cho nhóm lớn, công ty, tổ chức du lịch đông người",
