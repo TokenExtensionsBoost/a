@@ -115,7 +115,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-green-700 mt-8 pt-8 text-center">
           <p className="text-green-200">© 2025 Mộc Châu Trip Car. Tất cả quyền được bảo lưu.</p>
-          <p className="text-green-300 text-sm mt-2">Thiết kế bởi v0 - Phát triển với ❤️ tại Việt Nam</p>
+          <p className="text-green-300 text-sm mt-2">Thiết kế bởi Smoke - Phát triển với ❤️ tại Việt Nam</p>
         </div>
       </div>
     </footer>

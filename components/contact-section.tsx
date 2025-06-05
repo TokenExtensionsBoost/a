@@ -50,7 +50,9 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-green-800 mb-1">Hotline/Zalo</h4>
-                      <p className="text-gray-600">0583 543 456</p>
+                      <p className="text-gray-600 hover:text-green-600 cursor-pointer transition-colors">
+                        <a href="tel:0583543456">0583 543 456</a>
+                      </p>
                       <p className="text-sm text-gray-500">Hỗ trợ 24/7</p>
                     </div>
                   </div>
@@ -94,13 +96,15 @@ export default function ContactSection() {
               <div className="space-y-4">
                 <h4 className="font-semibold text-green-800">Liên hệ nhanh:</h4>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white flex items-center justify-center">
+                  <Button className="bg-green-600 hover:bg-green-700 text-white flex items-center justify-center" 
+                          onClick={() => window.open("https://zalo.me/0583543456", "_blank")}>
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Chat Zalo
                   </Button>
                   <Button
                     variant="outline"
                     className="border-orange-500 text-orange-500 hover:bg-orange-50 flex items-center justify-center"
+                    onClick={() => window.open("tel:0583543456", "_self")}
                   >
                     <Phone className="w-4 h-4 mr-2" />
                     Gọi ngay
