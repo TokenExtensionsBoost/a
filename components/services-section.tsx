@@ -47,14 +47,26 @@ const carTypes = [
   {
     name: "Xe 4 chỗ",
     image: "/images/xe4cho.jpeg",
-    price: "Từ 800.000đ/ngày",
-    features: ["Phù hợp gia đình nhỏ", "Tiết kiệm nhiên liệu", "Dễ di chuyển"],
+    price: "1.000.000đ - 1.200.000đ/ngày",
+    features: ["Xe đời mới 2024", "Tiết kiệm nhiên liệu", "Dễ di chuyển"],
+  },
+  {
+    name: "Xe 5 chỗ VF8",
+    image: "/images/xe5cho.jpeg",
+    price: "1.200.000đ - 1.300.000đ/ngày",
+    features: ["VF8 đời mới", "Khả năng off-road tốt", "Phù hợp đường đồi núi"],
   },
   {
     name: "Xe 7 chỗ",
     image: "/images/xe7cho.jpeg",
-    price: "Từ 1.200.000đ/ngày",
-    features: ["Gia đình đông người", "Rộng rãi thoải mái", "Hành lý nhiều"],
+    price: "1.200.000đ - 1.500.000đ/ngày",
+    features: ["Xe đời mới", "Rộng rãi thoải mái", "Hành lý nhiều"],
+  },
+  {
+    name: "Xe 9 chỗ",
+    image: "/images/xe9cho.jpg",
+    price: "1.500.000đ - 1.800.000đ/ngày",
+    features: ["Xe đời mới", "Không gian rộng rãi", "Thích hợp chuyến dài"],
   },
   {
     name: "Xe 16 chỗ",

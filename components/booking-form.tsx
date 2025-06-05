@@ -203,7 +203,7 @@ export default function BookingForm() {
                         <SelectContent>
                           <SelectItem value="4-seat">Xe 4 chỗ</SelectItem>
                           <SelectItem value="7-seat">Xe 7 chỗ</SelectItem>
-                          <SelectItem value="16-seat">Xe 16 chỗ</SelectItem>
+                          <SelectItem value="16-seat">Xe 9 chỗ</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>

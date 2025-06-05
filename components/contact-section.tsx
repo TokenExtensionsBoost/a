@@ -176,7 +176,7 @@ export default function ContactSection() {
                       <option>Chọn dịch vụ</option>
                       <option>Thuê xe 4 chỗ</option>
                       <option>Thuê xe 7 chỗ</option>
-                      <option>Thuê xe 16 chỗ</option>
+                      <option>Thuê xe 9 chỗ</option>
                       <option>Tour 1 ngày</option>
                       <option>Tour 2 ngày 1 đêm</option>
                       <option>Tour 3 ngày 2 đêm</option>

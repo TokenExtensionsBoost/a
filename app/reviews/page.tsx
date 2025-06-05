@@ -101,9 +101,10 @@ const tourTypes = [
   { name: "Tour 1 ngày", count: 156, rating: 5 },
   { name: "Tour 2 ngày 1 đêm", count: 203, rating: 5 },
   { name: "Tour 3 ngày 2 đêm", count: 89, rating: 5 },
-  { name: "Xe 4 chỗ", count: 312, rating: 5 },
-  { name: "Xe 7 chỗ", count: 445, rating: 5 },
-  { name: "Xe 16 chỗ", count: 178, rating: 5 },
+  { name: "Xe 4 chỗ đời mới 2024", count: 312, rating: 5 },
+  { name: "Xe 5 chỗ VF8", count: 278, rating: 5 },
+  { name: "Xe 7 chỗ đời mới", count: 445, rating: 5 },
+  { name: "Xe 9 chỗ đời mới", count: 178, rating: 5 },
 ]
 
 export default function ReviewsPage() {

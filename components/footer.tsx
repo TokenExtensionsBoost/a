@@ -66,7 +66,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="text-green-200">Thuê xe 4 chỗ</li>
               <li className="text-green-200">Thuê xe 7 chỗ</li>
-              <li className="text-green-200">Thuê xe 16 chỗ</li>
+              <li className="text-green-200">Thuê xe 9 chỗ</li>
               <li className="text-green-200">Tour 1 ngày</li>
               <li className="text-green-200">Tour 2-3 ngày</li>
               <li className="text-green-200">Tùy chỉnh lịch trình</li>

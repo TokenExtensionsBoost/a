@@ -31,9 +31,9 @@ const reviews = [
     rating: 5,
     date: "02/01/2025",
     comment:
-      "Đặt xe 16 chỗ cho công ty đi team building. Mọi thứ đều hoàn hảo từ A-Z. Đúng giờ, an toàn, tài xế vui vẻ. Highly recommended!",
+      "Đặt xe 9 chỗ cho công ty đi team building. Mọi thứ đều hoàn hảo từ A-Z. Đúng giờ, an toàn, tài xế vui vẻ. Highly recommended!",
     image: "https://i.pravatar.cc/150?img=3",
-    tour: "Xe 16 chỗ - 1 ngày",
+    tour: "Xe 9 chỗ - 1 ngày",
   },
   {
     name: "Chị Thu Hà",
